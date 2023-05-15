@@ -1,0 +1,7 @@
+num_speakers: [2, 3, 4, 5, 6, 7, 8, 9, 10] # number speaker per wav file
+prob: [0.2, 0.15, 0.15, 0.1, 0.1, 0.05, 0.05, 0.05, 0.05] # prob of each num speaker
+overlap_prob: [0.7, 0.3] # prob overlap or non overlap
+concat_mode: [0, 1] # 0 for concate with silence , 1 for concate two utterance
+silence_duration: 2000 # max duration
+overlap_rate: [0.1, 0.2, 0.3] # overlap rate
+overlap_rate_prob: [0.5, 0.3, 0.2] # prob of overlap rate

@@ -1,0 +1,3 @@
+inflect
+regex
+transformers>=4.0.1

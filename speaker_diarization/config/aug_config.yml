@@ -1,0 +1,7 @@
+noise_path: noise_datas #path to noise datas
+data_path: /home/tuyendv/projects/vnd-nlp-speaker-diarization/datas/simulated_datas/train # path to clean data (input)
+output_path: /home/tuyendv/projects/vnd-nlp-speaker-diarization/datas/simulated_datas/train # path to augment data (output)
+min_snr_db: 15 # min signal to noise ratio
+max_snr_db: 20 # max signal to noise ratio
+max_gain_db: 300
+sample_rate: 16000

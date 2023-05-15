@@ -1,0 +1,12 @@
+num_speakers: [2, 3, 4, 5, 6, 7, 8, 9] # number speaker per wav file
+num_speakers_prob: [0.2, 0.2, 0.15, 0.15, 0.1, 0.1, 0.05, 0.05] # prob of each num speaker
+concat_prob: [0.7, 0.3] # prob overlap or non overlap
+concat_mode: [0, 1] # 0 for concate with silence , 1 for concate two utterance
+silence_duration: 1500 # max duration
+overlap_rate: [0, 0.05, 0.1, 0.15, 0.2] # overlap rate
+overlap_rate_prob: [0.3, 0.25, 0.2, 0.15, 0.1] # prob of overlap rate
+max_num_utt_per_spk: 16  # maximum number of utt per speaker
+min_num_utt_per_spk: 6 # minimum number of utt per speaker
+spk2id_path: spk2id.json # mapping btw speaker real name and speaker id
+augment: true
+augment_config: aug_config.yml

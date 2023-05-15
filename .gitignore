@@ -1,0 +1,13 @@
+/youtube_datas/
+/datas/Đừng_nói_khi_yêu/
+/datas/raws/
+/datas/
+/nemo/ckpts/
+/nemo/inputs/
+/nemo/outputs/
+/noises/
+/nemo_experiments/
+/nemo/temps/
+/speaker_diarization/outputs/
+/*/nemo_experiments/
+/*/datas/
