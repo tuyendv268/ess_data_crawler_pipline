@@ -11,3 +11,5 @@
 /speaker_diarization/outputs/
 /*/nemo_experiments/
 /*/datas/
+speaker_verification/outputs
+speaker_diarization/inputs
