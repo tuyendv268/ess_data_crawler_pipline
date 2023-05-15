@@ -21,11 +21,12 @@ test_manifest = os.path.join(data_dir,'test.json')
 
 config.model.train_ds.manifest_filepath = train_manifest
 config.model.validation_ds.manifest_filepath = validation_manifest
+
 config.model.decoder.num_classes = 652
 accelerator = 'gpu' if torch.cuda.is_available() else 'cpu'
 config.trainer.devices = 1
 config.trainer.accelerator = accelerator
-config.trainer.max_epochs = 10
+config.trainer.max_epochs = 100
 config.trainer.strategy = None
 config.model.train_ds.augmentor=None
 
