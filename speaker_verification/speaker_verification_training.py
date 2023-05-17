@@ -8,7 +8,7 @@ import torch
 import pytorch_lightning as pl
 from nemo.utils.exp_manager import exp_manager
 
-MODEL_CONFIG = 'config/titanet-large.yaml'
+MODEL_CONFIG = 'config/finetune_titanet-large.yaml'
 config = OmegaConf.load(MODEL_CONFIG)
 
 print("Trainer config - \n")
@@ -26,13 +26,12 @@ config.model.decoder.num_classes = 652
 accelerator = 'gpu' if torch.cuda.is_available() else 'cpu'
 config.trainer.devices = 1
 config.trainer.accelerator = accelerator
-config.trainer.max_epochs = 100
+config.trainer.max_epochs = 5
 config.trainer.strategy = None
 config.model.train_ds.augmentor=None
 
 trainer = pl.Trainer(**config.trainer)
 log_dir = exp_manager(trainer, config.get("exp_manager", None))
-print(log_dir)
 speaker_model = nemo_asr.models.EncDecSpeakerLabelModel(cfg=config.model, trainer=trainer)
-
+speaker_model.maybe_init_from_pretrained_checkpoint(config)
 trainer.fit(speaker_model)
